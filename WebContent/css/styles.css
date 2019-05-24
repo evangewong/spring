@@ -1,0 +1,32 @@
+body {
+  background-color: #fefefe;
+  font-family: Sans-serif;
+  text-align: center;
+}
+
+.header{
+    background-color:#376034;
+    margin-top:-10px;
+    margin-left:-10px;
+    margin-right:-10px;
+    height:120px;
+    width:max-width;
+}
+
+h1{
+    color:#e6e6e6;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#376034;
+    text-decoration: underline;
+}
+
+
+.button.ghost {
+    color: #00AEEF;
+    border: 1px solid #00AEEF;
+	margin-left: 30%;
+	margin-right: 30%
+}

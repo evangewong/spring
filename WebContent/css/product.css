@@ -1,0 +1,25 @@
+.productImage{
+    position:relative;
+    display:block;
+    margin:0 auto;
+}
+
+.thumbnail:hover {
+    position:relative;
+    width:500px;
+    height:auto;
+    display:block;
+    z-index:999;
+    margin:0 auto;
+}
+
+#productInfo{
+    display:block;
+    text-align:center;
+}
+
+#productForm{
+	border-style: groove;
+	border-width: 5px;
+	padding: 0px,0px,0px,0px;
+}

@@ -1,0 +1,28 @@
+Team: Rosalva Rodriguez & Evangeline Wong
+
+URL: http:centaurus-8.ics.uci.edu:1057
+
+Database Password: The password was left as the default because we could not figure out how to change it without locking ourselves out of the database.
+
+--- GENERAL LAYOUT ---
+
+Welcome Page: index.html
+    Clicking on the "Shop All" button directs the user to the product table page.
+
+Products Page: main.html
+    Requirement #1: This page uses PHP and MySQL to generate the product info in the table.
+    Clicking on an image of the product directs the user to that product page.
+
+Product Detail & Purchase Page: product.html
+    Requirement #1: This page also uses PHP to query the database to generate the product details.
+    Requirement #2: Clicking the submit button on the order form will insert the order details in the database. 
+    Requirement #4: Ajax is used to fill customer information and used to update the product's price.
+        1. City and State is updated based on the given zip code (Located in Billing Info form)
+           (NOTE: If City and State fields are not empty, then they will not be updated based on the zip code)
+        2. Taxed Price is updated based on the given zip code (Located below description)
+
+Order confirmation page: confirmation.html
+    Requirement #3: This page displays the order details to the user.
+    Clicking on the button directrs the user back to the product table page. 
+
+

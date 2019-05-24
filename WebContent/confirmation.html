@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirmation</title>
+	<link rel="stylesheet" href="/css/styles.css" type="text/css">
+	<link rel="stylesheet" href="/css/main.css" type="text/css">
+</head>
+	<body>
+		
+		<div class="header"><br><h1>Your Order Has Been Placed</h1></div><br>
+
+		<div id=body></div>
+		<table id=order_table class="table table-striped">
+		    <thead>
+		    <tr>
+		    	<th>Confirmation ID</th>
+		        <th>Product</th>
+		        <th>Quantity</th>
+		        <th>Shipping Method</th>
+		    </tr>
+		    </thead>
+
+
+		    <tbody id=order_table_body></tbody>
+		</table>
+
+		<br>
+
+		<table id=customer_table class="table table-striped">
+		    <thead>
+		    <tr>
+		        <th>Name</th>
+		        <th>Address</th>
+		        <th>Phone Number</th>
+		        <th>Credit Card ending in</th>
+		    </tr>
+		    </thead>
+
+
+		    <tbody id=customer_table_body></tbody>
+		</table>
+
+
+		  <br>
+		  <a class="button ghost" href="./main.html"> See other products</a>
+
+		<!-- include jQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- include our own JS file -->
+		<script src="/js/confirmation.js"></script>
+	</body>
+</html>
