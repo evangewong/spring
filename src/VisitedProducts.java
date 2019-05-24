@@ -60,6 +60,13 @@ public class VisitedProducts extends HttpServlet {
 		    visited.add(param);
             session.setAttribute("visited", visited);
 	    }
+	    
+	    response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+	    JsonObject jsonObject = new JsonObject();
+		jsonObject.addProperty("response", "success");
+		out.write(jsonObject.toString());
+	    
 	}
 
 }

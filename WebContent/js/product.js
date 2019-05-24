@@ -103,6 +103,23 @@ function makeRequest(product){
 // $("#order_form").submit((event) => postOrder(event));
 
 
+
+//ajax function to make post request for product history servlet
+function postHistory(){
+ 
+	
+	var request = new XMLHttpRequest();
+	request.onreadystatechange = function(){
+		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+		}
+	};
+	request.open("POST", "VisitedProducts", true);
+	request.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+	request.send("visited="+product); 
+	
+}
+
 var product = getUrlVars()["product"]; //gets the actual paramter from the url. logs it to console.
 makeRequest(product);
-
+postHistory();
