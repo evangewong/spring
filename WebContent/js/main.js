@@ -12,8 +12,12 @@ function makeRequest(){
 	var request = new XMLHttpRequest();
 	request.onreadystatechange= function (){
 		if (this.readyState == 4 && this.status == 200) {
+			console.log(this.responseText);
+			
+			var jsonLines = this.responseText.split("*");
 
-			 var dataArr = JSON.parse(this.responseText);
+			
+			 var dataArr = JSON.parse(jsonLines[0]);
 			 console.log(dataArr);
 			// //gets productTable to populate
 			 var table = document.getElementById("productTable").getElementsByTagName('tbody')[0];
@@ -54,6 +58,10 @@ function makeRequest(){
                 cell5.innerHTML = "$" + dataArr[i]["price"];
 				
 			}
+			
+			
+			//handle visited
+			
 			
 			
   }

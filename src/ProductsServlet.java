@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -75,16 +76,17 @@ public class ProductsServlet extends HttpServlet {
 	        	json.add(jsonObject);
 	        }
 	        
-	        
-	        
-            /*String url = "/visited";
-			RequestDispatcher rd = req.getRequestDispatcher(url);
-			rd.include(request, response);
-            */
-            /*js file puts images in row at bottom*/
-	        
 	        out.print(json);
 	        response.setStatus(200);
+	        
+            String url = "/VisitedProducts";
+			RequestDispatcher rd = request.getRequestDispatcher(url);
+			rd.include(request, response);
+			
+			
+            
+	        
+	        
 	        con.close();
 			
 		} catch (Exception e) {
