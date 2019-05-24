@@ -22,7 +22,7 @@ public class ProductServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	
-	private String query = "Select * from Products where id=$product;";
+	private String query = "Select * from Products where id=?";
     private String type_query = "Select name from Types where id in (select typeId from Product_Type where productId=?)";
        
     private String username="root";
@@ -51,6 +51,7 @@ public class ProductServlet extends HttpServlet {
                 jsonObject.addProperty("price", rs.getString("price"));
                 jsonObject.addProperty("title", rs.getString("title"));
                 jsonObject.addProperty("origin", rs.getString("origin"));
+                jsonObject.addProperty("description", rs.getString("description"));
             }
             
             

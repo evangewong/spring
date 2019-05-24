@@ -15,21 +15,21 @@ function makeRequest(product){
 	request.onreadystatechange= function (){
 		if (this.readyState == 4 && this.status == 200) {
 			console.log(this.responseText);
-//			var myObj = JSON.parse(this.responseText); //note: JSON.parse() returns jsonarray
-//			var productImage = document.getElementById("productImage");
-//			productImage.setAttribute("src", myObj["url"]);  //sets the src attribute in the img element
+			var myObj = JSON.parse(this.responseText); //note: JSON.parse() returns jsonarray
+			var productImage = document.getElementById("productImage");
+			productImage.setAttribute("src", myObj["url"]);  //sets the src attribute in the img element
+
+			document.getElementById("productOrigin").innerHTML = myObj["origin"];
+			document.getElementById("productDesc").innerHTML = myObj["description"];
 //
-//			document.getElementById("productOrigin").innerHTML = myObj["origin"];
-//			document.getElementById("productDesc").innerHTML = myObj["description"];
-//
-//			for(j = 0; j < myObj["type"].length; j++){
-//            	if(j>0){
-//               		document.getElementById("productType").innerHTML += ",";
-//            	}
-//                document.getElementById("productType").innerHTML += myObj["type"][j];
-//            }
-//			
-//		    document.getElementById("price").innerHTML = myObj["price"];
+			for(j = 0; j < myObj["type"].length; j++){
+            	if(j>0){
+               		document.getElementById("productType").innerHTML += ",";
+            	}
+                document.getElementById("productType").innerHTML += myObj["type"][j]["name"];
+            }
+			
+		    document.getElementById("price").innerHTML = myObj["price"];
 		    // document.getElementById("taxPrice").innerHTML = myObj["price"];
 		}
 	};
