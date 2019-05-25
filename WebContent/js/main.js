@@ -61,6 +61,16 @@ function makeRequest(){
 			
 			
 			//handle visited
+			var visitedArr = JSON.parse(jsonLines[1]);
+			console.log(visitedArr)
+			var visitedTable = document.getElementById("visitedTable").getElementsByTagName('tr')[0];
+			for(i = 0; i < visitedArr.length; i++){
+				var th = document.createElement('th');
+				var image = document.createElement('img');
+				image.setAttribute('src',dataArr[parseInt(visitedArr[i]['id'],10)-1]['url']);
+				th.appendChild(image);
+				visitedTable.appendChild(th);
+			}
 			
 			
 			

@@ -57,7 +57,9 @@ public class VisitedProducts extends HttpServlet {
         }
 
 	    if(visited.contains(param) == false) { //add product to visited if its not already in
-		    visited.add(param);
+	    	if(visited.size() == 5)
+	    		visited.remove(0);
+	    	visited.add(param);
             session.setAttribute("visited", visited);
 	    }
 	    
@@ -65,7 +67,7 @@ public class VisitedProducts extends HttpServlet {
         PrintWriter out = response.getWriter();
 	    JsonObject jsonObject = new JsonObject();
 		jsonObject.addProperty("response", "success");
-		out.write(jsonObject.toString());
+		out.print(jsonObject);
 	    
 	}
 
