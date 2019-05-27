@@ -76,7 +76,7 @@ function makeRequest(){
 			
   }
 	};//
-	request.open("GET", "ProductsServlet"/*"../php/main.php"*/, true);
+	request.open("GET", "ProductsServlet", true);
 	request.send();
 	
 }

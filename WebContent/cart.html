@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Shopping Cart</title>
+</head>
+	<link rel="stylesheet" href="css/styles.css"> 
+<body>
+
+
+	<div id="container">
+		<table id=cart_table class="table table-striped">
+		   <thead>
+		    <tr>
+		        <th>Poster</th>
+		    </tr>
+		   </thead>
+		
+		    <tbody id=cart_table_body></tbody>
+		</table>
+	</div>
+
+	
+	
+    <div id="productForm">
+		<form id="order_form" method="post" enctype="text/plain">
+			<h3>Billing Info</h3>  
+					<Label>Shipping Method</Label>
+					  <select name=cc_shipping id=shipping>
+						<option value="Overnight">Overnight</option>
+						<option value="2 Days Expedited">2 Days Expedited</option>
+						<option value="Ground Shipping">Ground Shipping</option>
+					  </select>  
+					  <br>
+					  <input type=text name="first_name" placeholder="First Name"  required>
+					  <input type=text name="last_name" placeholder="Last Name"  required>
+					  <br>
+					  <input type=tel name="phone_number"   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone number" required><span> Format: 123-456-7890</span>
+					  <br>
+
+					  <input type=text name="address_street" placeholder=Street required>
+					  <input type=text name="address_apt"  placeholder=Apt >
+					  <br>
+					  <input type=text name="address_city" id="address_city" placeholder=City required>
+					  <input type=text name="address_state" id="address_state" placeholder=State required>
+					  <br>
+					  <input type=text name="address_zip"  pattern=[0-9]+ placeholder="Zip Code"
+                        required />
+					  <select name="address_country"  >
+						<option value="United States">US / United States</option>
+						<option value="Canada">Canada</option>
+					  </select>
+			
+			<h3>Credit Card Info</h3>
+					  <input type=text name="cc_number" placeholder="Card Number" required minlength="16" maxlength="16" pattern="[0-9]*">
+					  <div class=split-input>
+						<select  class=three-quarters name="cc_type">
+						  <option value="Visa">Visa</option>
+						  <option value="Mastercard">Mastercard</option>
+						  <option value="Discover">American Express</option>
+						</select>
+						<input type=number name="cc_cvv" id=cvv placeholder=CVV autocorrect=off class=quarter required>
+					  </div>
+					  
+					  <Label>Expiration Month</Label>
+					  <select name=cc_exp_month id=expMonth>
+						<option value="01">01</option>
+						<option value="02">02</option>
+						<option value="03">03</option>
+						<option value="04">04</option>
+						<option value="05">05</option>
+						<option value="06">06</option>
+						<option value="07">07</option>
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					  </select>
+					  <Label>Expiration Year</Label>
+					  <select id=expYear name=cc_exp_year >
+						<option value=2019>2019</option>
+						<option value=2020>2020</option>
+						<option value=2021>2021</option>
+						<option value=2022>2022</option>
+						<option value=2023>2023</option>
+						<option value=2024>2024</option>
+						<option value=2025>2025</option>
+						<option value=2026>2026</option>
+					  </select>
+				
+                    <br><br>
+			</form>
+		</div>
+		
+		<button id="cart" onclick="checkout()">Proceed to checkout</button>
+	
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<script src="./js/cart.js"></script>
+
+</html>
