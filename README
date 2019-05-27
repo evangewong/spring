@@ -1,6 +1,8 @@
 Team: Rosalva Rodriguez & Evangeline Wong
 
-URL: http:centaurus-8.ics.uci.edu:1057
+site URL: http:centaurus-3.ics.uci.edu:1040/spring
+phpMyAdmin URL: http:centaurus-3.ics.uci.edu:1042/
+tomcat URL: http:centaurus-3.ics.uci.edu:1040/manager
 
 Database Password: The password was left as the default because we could not figure out how to change it without locking ourselves out of the database.
 
@@ -10,19 +12,13 @@ Welcome Page: index.html
     Clicking on the "Shop All" button directs the user to the product table page.
 
 Products Page: main.html
-    Requirement #1: This page uses PHP and MySQL to generate the product info in the table.
-    Clicking on an image of the product directs the user to that product page.
+    Requirement #1: This page uses two servlets to generate the product info in the table and a table of recently viewed products.
+    Clicking on an image of the product directs the user to that product page. Under all the products is a "Recently Visited" section, which lists the last 5 seen products. There is also a link which leads to the shopping cart page.
 
-Product Detail & Purchase Page: product.html
-    Requirement #1: This page also uses PHP to query the database to generate the product details.
-    Requirement #2: Clicking the submit button on the order form will insert the order details in the database. 
-    Requirement #4: Ajax is used to fill customer information and used to update the product's price.
-        1. City and State is updated based on the given zip code (Located in Billing Info form)
-           (NOTE: If City and State fields are not empty, then they will not be updated based on the zip code)
-        2. Taxed Price is updated based on the given zip code (Located below description)
+Product Detail Page: product.html
+    Requirement #2: This page also uses a servlet to query the database to generate the product details. If the user clicks the "Add to Cart" button, the session will save the product in the shopping cart. There is also a link which leads the user to the shopping cart page.
 
-Order confirmation page: confirmation.html
-    Requirement #3: This page displays the order details to the user.
-    Clicking on the button directrs the user back to the product table page. 
-
+Check out Page: cart.html
+    Requirement #3: This page displays the products ordered by the user and places the user's information into the database.
+    Not implemented yet: Clicking the check out button places the order in the database.
 
